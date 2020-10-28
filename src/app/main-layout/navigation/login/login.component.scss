@@ -3,11 +3,28 @@
   font-size: small;   
   font-family: monospace;
  }
-
+.signUpActive{
+  background-color: white;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    font-style: normal;
+}
+.signInActive{
+  background-color: white;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    font-style: normal;
+}
  * {
   box-sizing: border-box;
 }
 
+.custom-select {
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 50%;
+}
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
@@ -56,3 +73,10 @@
       .sidebar-fixed {
         display: none; } }
     
+
+        .modal-body {
+          position: relative;
+          flex: 1 1 auto;
+          padding: 0.4rem;
+          font-size: x-small;
+      }

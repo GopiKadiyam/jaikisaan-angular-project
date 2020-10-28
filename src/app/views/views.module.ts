@@ -45,8 +45,7 @@ import { HomeComponent } from './home/home.component';
     Dashboard1Component,
     Profile1Component,
     HelpComponent,
-    HomeComponent,
-   
+    HomeComponent,   
 
   ],
   exports: [

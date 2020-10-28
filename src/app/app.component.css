@@ -1,0 +1,23 @@
+html,
+body,
+.view {
+  height: 46vh;
+}
+
+/* Full Page Carousel itself*/
+.carousel {
+  height: 46vh;
+}
+
+.carousel .carousel-inner {
+  height: 46vh;
+}
+
+.carousel .carousel-inner .carousel-item,
+.carousel .carousel-inner .active {
+  height: 46vh;
+}
+
+img .d-block {
+    height: 46vh;
+  }

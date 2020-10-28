@@ -20,9 +20,12 @@ import { Dashboard1Component } from './views/dashboards/dashboard1/dashboard1.co
 // main layout
 import { NavigationModule } from './main-layout/navigation/navigation.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { HomeComponent } from './views/home/home.component';
+import { LoginService } from './login.service';
 
 const routes: Route[] = [
-  { path: '', pathMatch: 'full', redirectTo: 'dashboards/v1' },
+  { path: '', pathMatch: 'full', redirectTo: '/home' },
+  {path:"home",component:HomeComponent},
   { path: 'dashboards', children:
     [
       { path: 'v1', component: Dashboard1Component },
@@ -69,7 +72,7 @@ const routes: Route[] = [
     ReactiveFormsModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
 })

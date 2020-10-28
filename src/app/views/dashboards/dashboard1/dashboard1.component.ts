@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/login.service';
 
 @Component({
   selector: 'app-dashboard1',
@@ -55,10 +56,15 @@ export class Dashboard1Component implements OnInit {
     }
   };
 
-  constructor() {
+  constructor(private loginService:LoginService) {
   
   }
-
+  get accountid(){
+    return this.loginService.accountid;
+  }
+  test(name:any){
+    alert(name)
+  }
   ngOnInit() {
   }
 

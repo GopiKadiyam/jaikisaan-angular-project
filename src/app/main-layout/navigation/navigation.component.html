@@ -5,10 +5,14 @@
     <div class="sidebar-fixed position-fixed">
 
         <a class="logo-wrapper waves-effect">
-            <img src="../../../../assets/img/angular-mdb.png" class="img-fluid" alt="">
+            <img src="/assets/img/jaikisaanIcon.png" class="img-fluid" alt="">
         </a>
 
         <div class="list-group list-group-flush">
+            <a routerLink="home" routerLinkActive="active"
+            class="list-group-item list-group-item-action waves-effect">
+            <mdb-icon fas icon="home" class="mr-3"></mdb-icon>Home
+             </a>
             <a routerLink="tables/table1" routerLinkActive="active"
                 class="list-group-item list-group-item-action waves-effect">
                 <mdb-icon fas icon="th-large" class="mr-3"></mdb-icon>All Products
@@ -18,6 +22,7 @@
                 class="list-group-item list-group-item-action waves-effect">
                 <mdb-icon fas icon="chart-bar" class="mr-3"></mdb-icon>MarketPrices
             </a>
+            <span *ngIf="accountid != 0">
             <a routerLink="profiles/profile1" routerLinkActive="active"
                 class="list-group-item list-group-item-action waves-effect">
                 <mdb-icon fas icon="user" class="mr-3"></mdb-icon>My Account
@@ -25,12 +30,12 @@
 
             <a routerLink="myorders" routerLinkActive="active"
                 class="list-group-item list-group-item-action waves-effect">
-                <mdb-icon far icon="cart-arrow-down" class="mr-3"></mdb-icon>My Orders
+                <mdb-icon fas icon="cart-arrow-down" class="mr-3"></mdb-icon>My Orders
             </a>
-
+             </span>
             <a routerLink="maps/map1" routerLinkActive="active"
                 class="list-group-item list-group-item-action waves-effect">
-                <mdb-icon far icon="heading" class="mr-3"></mdb-icon>Help Center
+                <mdb-icon fas icon="heading" class="mr-3"></mdb-icon>Help Center
             </a>
 
             <a routerLink="nonExistingPath" routerLinkActive="active"
@@ -48,7 +53,7 @@
 
         <!-- Navbar brand -->
         <logo class="ml-3">
-            <a class="navbar-brand" href="https://mdbootstrap.com/angular/angular-bootstrap-getting-started/">
+            <a class="navbar-brand" routerLink="home">
                 <strong class="blue-text">Jaikisaan</strong>
             </a>
         </logo>
@@ -59,7 +64,7 @@
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" mdbWavesEffect>Home
+                    <a class="nav-link" routerLink="home" routerLinkActive="active" mdbWavesEffect>Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
@@ -74,7 +79,7 @@
                 </li> -->
             </ul>
             <!-- Links -->
-           <app-login></app-login>
+           <app-login></app-login> 
 
         </links>
         <!-- Collapsible content -->
